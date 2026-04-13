@@ -13,6 +13,7 @@ const FLAG_PATHS = {
   '--cursor': path.join(os.homedir(), '.cursor', 'skills'),
   '--claude': path.join(os.homedir(), '.claude', 'skills'),
   '--windsurf': path.join(os.homedir(), '.codeium', 'windsurf', 'skills'),
+  '--trae': path.join(os.homedir(), '.trae', 'skills'),
   '--kiro': path.join(os.homedir(), '.kiro', 'skills'),
   '--opencode': path.join(os.homedir(), '.config', 'opencode', 'skills'),
   '--codex': path.join(os.homedir(), '.openai', 'skills'),

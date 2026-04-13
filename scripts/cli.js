@@ -15,14 +15,17 @@ const COMMANDS = {
 
 if (!command || !COMMANDS[command]) {
   console.log('--- Summan AI CLI ---');
-  console.log('Uso: npx . <comando> [opciones]');
+  console.log('Uso: npx github:lufermalgo/summan-ai-dtw-consultants <comando> [opciones]');
   console.log('');
   console.log('Comandos disponibles:');
   console.log('  install      Instala los skills en el entorno detectado.');
   console.log('  uninstall    Remueve los skills instalados.');
   console.log('  catalog      Genera o actualiza el catálogo de habilidades.');
   console.log('');
-  console.log('Ejemplo: npx . install --antigravity');
+  console.log('Banderas de Instalación (IDEs soportados):');
+  console.log('  --antigravity, --gemini, --cursor, --claude, --windsurf, --trae, --kiro, --opencode, --codex, --global');
+  console.log('');
+  console.log('Ejemplo: npx github:lufermalgo/summan-ai-dtw-consultants install --claude');
   process.exit(1);
 }
 
