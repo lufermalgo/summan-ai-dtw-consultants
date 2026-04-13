@@ -1,0 +1,47 @@
+{
+  "framework": "sAhI (Summan Analytical Health Index)",
+  "version": "1.0",
+  "scoring_model": {
+    "dimensions": [
+      {
+        "id": "A",
+        "name": "Match con la Propuesta Analítica (Fit)",
+        "weight": 0.30,
+        "description": "¿El problema se resuelve con los entregables analíticos definidos?"
+      },
+      {
+        "id": "B",
+        "name": "Impacto en Eficiencia y Rendimiento (OEE)",
+        "weight": 0.20,
+        "description": "¿Mitiga cuellos de botella o aumenta tasa de conversión?"
+      },
+      {
+        "id": "C",
+        "name": "Estabilidad de Calidad y Conformidad",
+        "weight": 0.20,
+        "description": "¿Previene desviaciones o reduce mermas/reprocesos?"
+      },
+      {
+        "id": "D",
+        "name": "Mantenimiento y Protección del Activo",
+        "weight": 0.15,
+        "description": "¿Anticipa fallas graves o estados previos a falla?"
+      },
+      {
+        "id": "E",
+        "name": "Madurez Analítica (Data Readiness)",
+        "weight": 0.15,
+        "description": "¿Están fluyendo hoy los datos necesarios (PLC, SCADA, ERPs)?"
+      }
+    ],
+    "scale": {
+      "1-2": "Nulo o Bajo: Repercusión mínima o datos inexistentes.",
+      "3": "Moderado / Condicionado: Relación teórica o requiere alta inversión en sensores.",
+      "4-5": "Alta Prioridad / Crítico: Impacto financiero verificable y datos confiables."
+    },
+    "thresholds": {
+      "high_priority": 4.0,
+      "narrative": "Escoger estrictamente puntajes > 4.0 para el pitch exponencial."
+    }
+  }
+}
