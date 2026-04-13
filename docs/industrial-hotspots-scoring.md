@@ -1,4 +1,4 @@
-# Scoring Analítico de Hotspots Industriales
+# 4. Industrial Hotspots Scoring
 
 > *Donde la Inteligencia Artificial transforma el ruido operativo en decisiones de inversión precisas.*
 
@@ -149,6 +149,12 @@ La tipografía deliberada (**s**AhI) resalta la **AI** (Artificial Intelligence)
 sAhI no es solo una herramienta de scoring. Es un **componente clave del ecosistema de consultoría acelerada por IA de Summan** que transformará la forma en que se diagnostica, propone y ejecuta proyectos de transformación digital industrial.
 
 > *"De la intuición del consultor al veredicto de la máquina. De semanas de análisis a días de claridad."*
+
+---
+
+## Navegación
+
+[⬅️ Anterior: Digital Readiness Framework](digital-readiness-framework.md) | [🏠 Inicio](../README.md) | [Siguiente: ISA-95 Technical Standards ➡️](isa-95-technical-standards.md)
 
 ---
 

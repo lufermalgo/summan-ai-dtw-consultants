@@ -10,13 +10,13 @@ const LOCAL_SKILLS_PATH = path.join(process.cwd(), 'skills');
 const FLAG_PATHS = {
   '--antigravity': path.join(os.homedir(), '.gemini', 'antigravity', 'skills'),
   '--gemini': path.join(os.homedir(), '.gemini', 'antigravity', 'skills'),
-  '--cursor': path.join(os.homedir(), '.cursor', 'extensions', 'skills'),
-  '--claude': os.platform() === 'darwin' 
-    ? path.join(os.homedir(), 'Library', 'Application Support', 'Claude', 'skills')
-    : path.join(os.homedir(), '.claude', 'skills'),
-  '--windsurf': path.join(os.homedir(), '.windsurf', 'skills'),
-  '--codex': path.join(os.homedir(), '.codex', 'skills'),
-  '--opencode': path.join(os.homedir(), '.opencode', 'skills')
+  '--cursor': path.join(os.homedir(), '.cursor', 'skills'),
+  '--claude': path.join(os.homedir(), '.claude', 'skills'),
+  '--windsurf': path.join(os.homedir(), '.codeium', 'windsurf', 'skills'),
+  '--kiro': path.join(os.homedir(), '.kiro', 'skills'),
+  '--opencode': path.join(os.homedir(), '.config', 'opencode', 'skills'),
+  '--codex': path.join(os.homedir(), '.openai', 'skills'),
+  '--global': path.join(os.homedir(), '.agents', 'skills')
 };
 
 const MANIFEST_NAME = '.summan-installed-skills.json';

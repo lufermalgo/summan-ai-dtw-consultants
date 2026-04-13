@@ -1,4 +1,4 @@
-# Framework de Evaluación de Preparación Digital
+# 3. Digital Readiness Framework
 
 > *Criterios técnicos para la habilitación de Mini Twins y Gemelos Digitales Industriales.*
 
@@ -98,10 +98,16 @@ Para facilitar la evaluación, se presentan ejemplos basados en casos reales de 
 
 ### Brechas Comunes (Gap Analysis)
 
-*   **Instrumentación:** "Faltan variables críticas como flujo másico o calidad de vapor. El monitoreo de condición mecánica sigue siendo manual o tercerizado." (Puntaje Sugerido: 1)
-*   **Continuidad:** "Se detectan huecos de contexto; el paro se registra, pero el motivo sigue siendo ingresado manualmente por el operador." (Puntaje Sugerido: 2)
-*   **Resiliencia:** "No hay evidencia de redundancia o failover en nodos críticos de red industrial." (Puntaje Sugerido: 0)
-*   **Cultura:** "Alta apertura y capacidad real para trabajar con terceros especializados e integradores." (Puntaje Sugerido: 3)
+* **Instrumentación:** "Faltan variables críticas como flujo másico o calidad de vapor. El monitoreo de condición mecánica sigue siendo manual o tercerizado." (Puntaje Sugerido: 1)
+* **Continuidad:** "Se detectan huecos de contexto; el paro se registra, pero el motivo sigue siendo ingresado manualmente por el operador." (Puntaje Sugerido: 2)
+* **Resiliencia:** "No hay evidencia de redundancia o failover en nodos críticos de red industrial." (Puntaje Sugerido: 0)
+* **Cultura:** "Alta apertura y capacidad real para trabajar con terceros especializados e integradores." (Puntaje Sugerido: 3)
+
+---
+
+## Navegación
+
+[⬅️ Anterior: Journey to Digital Twin](journey-to-digital-twin.md) | [🏠 Inicio](../README.md) | [Siguiente: Industrial Hotspots Scoring ➡️](industrial-hotspots-scoring.md)
 
 ---
 

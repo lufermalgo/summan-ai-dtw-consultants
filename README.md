@@ -1,32 +1,47 @@
-# Summan AI Consulting Pipeline: Journey to the Digital Twin
+# 🚀 Summan AI Consulting Pipeline: De la Evidencia al Gemelo Digital
 
-Este repositorio es el núcleo tecnológico del **Pipeline de Consultoría Summan AI**, una suite de agentes inteligentes diseñados para orquestar la transformación industrial hacia el **Gemelo Digital (Digital Twin)**.
+Este repositorio es el ecosistema de conocimiento y ejecución de la plataforma **Summan AI Consulting**. Aquí, la metodología industrial y la inteligencia artificial generativa se unen para orquestar la transformación digital de activos físicos.
 
-## 📖 Visión Estratégica
+---
 
-El pipeline sigue la metodología propietaria de Summan para la evaluación de activos industriales, estructurada en fases de descubrimiento, diagnóstico y roadmapping.
+## 🧭 Visión Estratégica (Norte Summan)
 
-1. **Journey to Digital Twin**: [El punto de partida de la consultoría](docs/journey-to-digital-twin.md)
-2. **Digital Readiness Framework**: [El marco técnico de evaluación](docs/digital-readiness-framework.md)
-3. **Industrial Hotspots Scoring**: [La metodología de calificación de impactos](docs/industrial-hotspots-scoring.md)
+Para entender de manera orgánica cómo las habilidades (Skills) y la teoría se entrelazan, sigue este hilo conductor estratégico:
 
-## 🛠️ Instalación y Configuración
+1. [1. El Motivador: Visión End-to-End](docs/summan-end-to-end-vision.md): El "Por qué" de los 7 agentes expertos y el flujo de valor.
+2. [2. Journey to Digital Twin](docs/journey-to-digital-twin.md): El "Cómo" — el camino paso a paso desde el descubrimiento hasta el reporte.
+3. [3. Digital Readiness Framework](docs/digital-readiness-framework.md): El marco técnico de evaluación de madurez.
+4. [4. Industrial Hotspots Scoring](docs/industrial-hotspots-scoring.md): Metodología sAhI para priorizar dolores operativos.
+5. [5. Norma ISA-95](docs/isa-95-technical-standards.md): Estándar técnico para la convergencia IT/OT.
 
-El pipeline es portable y puede instalarse directamente desde GitHub en los principales entornos de agentes de IA.
+---
 
-### Instalación Rápida
+## 🛠️ Instalación y Configuración Universal
+
+El pipeline de Summan es portable y puede instalarse directamente desde GitHub en cualquier entorno de agente de IA (IDE o CLI).
+
+### Instalación Rápida (Remote Dist)
 
 Ejecuta el siguiente comando en la raíz de tu proyecto, usando el flag correspondiente a tu herramienta:
 
 ```bash
-# Distribución principal (Antigravity / Gemini CLI)
+# Antigravity / Gemini CLI
 npx github:lufermalgo/summan-ai-dtw-consultants --antigravity
 
-# Otros entornos compatibles
-npx github:lufermalgo/summan-ai-dtw-consultants --cursor      # Cursor AI
-npx github:lufermalgo/summan-ai-dtw-consultants --claude      # Claude Code / CLI
-npx github:lufermalgo/summan-ai-dtw-consultants --windsurf    # Windsurf
-npx github:lufermalgo/summan-ai-dtw-consultants --opencode    # OpenCode
+# Claude Code / CLI
+npx github:lufermalgo/summan-ai-dtw-consultants --claude
+
+# Cursor & Windsurf
+npx github:lufermalgo/summan-ai-dtw-consultants --cursor
+npx github:lufermalgo/summan-ai-dtw-consultants --windsurf
+
+# Kiro & Trae & OpenAI Codex
+npx github:lufermalgo/summan-ai-dtw-consultants --kiro
+npx github:lufermalgo/summan-ai-dtw-consultants --trae
+npx github:lufermalgo/summan-ai-dtw-consultants --codex
+
+# Otros (Standard .agents/skills)
+npx github:lufermalgo/summan-ai-dtw-consultants --global
 ```
 
 ### Verificación de la Instalación
@@ -50,20 +65,41 @@ Una vez instalados, puedes invocar al orquestador o a sub-agentes específicos m
 
 ### Gestión de Entregables
 
-Para mantener un entorno de trabajo limpio y profesional, todas las salidas (reportes, matrices, roadmaps) se centralizan automáticamente en:
+Todas las salidas (reportes, matrices, roadmaps) se centralizan automáticamente en:
 
 * **Directorio**: `/outputs/`
 * **Formato**: Markdown (.md) de alta fidelidad.
 
 ## ⚙️ Mantenimiento del Pipeline
 
-El repositorio incluye una suite de comandos para gestionar el ciclo de vida de los skills:
+El repositorio cuenta con una interfaz unificada para gestionar el ciclo de vida de los skills de forma remota:
 
 | Comando | Descripción |
 | :--- | :--- |
-| `summan-install` | Actualiza o reinstala los skills desde el origen. |
-| `summan-uninstall` | Elimina de forma segura todos los recursos instalados. |
-| `summan-catalog` | Sincroniza el catálogo de habilidades con los metadatos de los skills. |
+| `npx github:lufermalgo/summan-ai-dtw-consultants install` | Instala los skills en el entorno detectado (`--antigravity`, `--cursor`, etc). |
+| `npx github:lufermalgo/summan-ai-dtw-consultants uninstall` | Remueve de forma segura los recursos instalados. |
+| `npx github:lufermalgo/summan-ai-dtw-consultants catalog` | Sincroniza el catálogo global con las definiciones locales. |
+
+> [!TIP]
+> No es necesario clonar el repositorio para mantener tus skills actualizados. Los comandos anteriores funcionan directamente desde GitHub.
+
+---
+
+### Official Sources
+
+- **[anthropics/skills](https://github.com/anthropics/skills)**: Official Anthropic skills repository - Document manipulation (DOCX, PDF, PPTX, XLSX), Brand Guidelines, Internal Communications.
+- **[anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks)**: Official notebooks and recipes for building with Claude.
+- **[remotion-dev/skills](https://github.com/remotion-dev/skills)**: Official Remotion skills - Video creation in React with 28 modular rules.
+- **[vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)**: Vercel Labs official skills - React Best Practices, Web Design Guidelines.
+- **[openai/skills](https://github.com/openai/skills)**: OpenAI Codex skills catalog - Agent skills, Skill Creator, Concise Planning.
+- **[supabase/agent-skills](https://github.com/supabase/agent-skills)**: Supabase official skills - Postgres Best Practices.
+- **[microsoft/skills](https://github.com/microsoft/skills)**: Official Microsoft skills - Azure cloud services, Bot Framework, Cognitive Services, and enterprise development patterns across .NET, Python, TypeScript, Go, Rust, and Java.
+- **[google-gemini/gemini-skills](https://github.com/google-gemini/gemini-skills)**: Official Gemini skills - Gemini API, SDK and model interactions.
+- **[apify/agent-skills](https://github.com/apify/agent-skills)**: Official Apify skills - Web scraping, data extraction and automation.
+- **[expo/skills](https://github.com/expo/skills)**: Official Expo skills - Expo project workflows and Expo Application Services guidance.
+- **[huggingface/skills](https://github.com/huggingface/skills)**: Official Hugging Face skills - Models, Spaces, datasets, inference, and broader Hugging Face ecosystem workflows.
+- **[neondatabase/agent-skills](https://github.com/neondatabase/agent-skills)**: Official Neon skills - Serverless Postgres workflows and Neon platform guidance.
+- **[scopeblind/scopeblind-gateway](https://github.com/scopeblind/scopeblind-gateway)**: Official Scopeblind MCP governance toolkit - Cedar policy authoring, shadow-to-enforce rollout, and signed-receipt verification guidance for agent tool calls.
 
 ---
 

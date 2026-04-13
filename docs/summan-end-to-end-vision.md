@@ -1,4 +1,4 @@
-# Summan AI Consulting Platform to Digital Twin — Visión End-to-End
+# 1. El Motivador: Visión End-to-End
 
 > *De la evidencia cruda al informe ejecutivo: 7 Skills especializados que gobiernan el ciclo completo del Assessment de Preparación Digital.*
 
@@ -253,4 +253,8 @@ La plataforma se alimenta de la metodología y herramientas propietarias de Summ
 
 ---
 
-*Powered by Summan
+[🏠 Inicio](../README.md) | [Siguiente: Journey to Digital Twin ➡️](journey-to-digital-twin.md)
+
+---
+
+*Powered by Summan.*

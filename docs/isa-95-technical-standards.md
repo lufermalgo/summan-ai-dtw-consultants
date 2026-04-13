@@ -1,35 +1,38 @@
-# Guía Técnica: Estándares ISA-95 e ISA-88 para Consultoría Summan
+# 5. Norma ISA-95: Estándares Técnicos para la Convergencia IT/OT
 
-Este documento proporciona el marco de referencia técnica para el análisis de sistemas OT/IT y la convergencia de datos en procesos industriales.
+El éxito de un Gemelo Digital depende de la capacidad de integrar datos de piso de planta (OT) con sistemas de negocio (IT). En **Summan AI**, utilizamos el estándar **ISA-95** como el lenguaje universal para estructurar esta integración.
 
-## 1. Modelo de Jerarquía Funcional (ISA-95)
+---
 
-La integración exitosa de un Gemelo Digital requiere claridad en el flujo de datos entre los niveles de la pirámide de automatización:
+## 1. El Modelo de Niveles (Pirámide de Automatización)
 
-| Nivel | Descripción | Tecnologías Clave |
-| :--- | :--- | :--- |
-| **Nivel 4** | Gestión de Negocio (IT) | ERP (SAP, Oracle, MS Dynamics), BI, Analytics. |
-| **Nivel 3** | Gestión de Operaciones (MOM) | MES, LIMS (Laboratorio), CMMS (Mantenimiento), WMS (Logística). |
-| **Nivel 2** | Control Supervisorio (OT) | SCADA, HMI, Historians (Ignition, Canary, PI System). |
-| **Nivel 1** | Control de Proceso | PLC, DCS, RTU. |
-| **Nivel 0** | Producción Física | Sensores (Temp, Presión, Flujo), Actuadores. |
+Para que nuestros agentes de IA puedan navegar la información, clasificamos los activos según su nivel funcional:
 
-## 2. Sistemas MOM (Manufacturing Operations Management)
+*   **Nivel 0-2 (Piso de Planta):** Sensores, PLCs, SCADA. Datos crudos de proceso (presión, temperatura, estado de motor).
+*   **Nivel 3 (Operaciones - MES):** Gestión de la producción, calidad y mantenimiento. Contexto de "qué producto estamos haciendo".
+*   **Nivel 4 (Negocio - ERP):** Planificación, compras, finanzas. El impacto económico de la producción.
 
-El análisis debe contemplar los sistemas específicos que gestionan la manufactura:
+---
 
-*   **LIMS (Laboratory Information Management System):** Gestión de calidad, trazabilidad de muestras y certificados de análisis.
-*   **CMMS (Computerized Maintenance Management System):** Planes de mantenimiento, gestión de activos y registro de paros.
-*   **WMS (Warehouse Management System):** Gestión de inventarios de materia prima y producto terminado en tiempo real.
-*   **MES (Manufacturing Execution System):** Orquestación de órdenes de producción y captura de datos de piso en tiempo real.
+## 2. Definición de Activos (Equipamiento)
 
-## 3. Infraestructura y Redes (Conectividad)
+Nuestra jerarquía documental sigue la estructura ISA-95:
+1.  **Enterprise (Empresa)**
+2.  **Site (Planta/Sede)**
+3.  **Area (Línea de producción/Célula)**
+4.  **Work Center (Máquina/Equipo)**
+5.  **Work Unit (Componente crítico)**
 
-Para habilitar un Gemelo Digital, la red debe garantizar:
+---
 
+## 3. Criterios de Preparación Digital (Readiness)
+
+Al evaluar una planta bajo este estándar, los consultores deben validar:
 *   **Capacidad de Adquisición:** Uso de protocolos modernos (OPC-UA, MQTT, SQL, API Rest).
 *   **Segregación OT/IT:** Existencia de DMZ y firewalls industriales para ciberseguridad.
 *   **Resiliencia:** Buffering (Store-and-Forward) para evitar pérdida de datos ante cortes de red.
+
+---
 
 ## 4. Convergencia de Datos para el Gemelo Digital
 
@@ -39,4 +42,11 @@ El Gemelo Digital no es solo un modelo 3D; es la unión de:
 3.  **Negocio (Nivel 4):** Cuánto cuesta y qué impacto tiene.
 
 ---
-*Referencia Estándar para Consultores de Summan AI.*
+
+## Navegación
+
+[⬅️ Anterior: Industrial Hotspots Scoring](industrial-hotspots-scoring.md) | [🏠 Inicio](../README.md)
+
+---
+
+*Powered by Summan.*

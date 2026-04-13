@@ -1,0 +1,116 @@
+{
+  "framework": "Summan Digital Readiness Assessment",
+  "version": "1.0",
+  "scoring_model": {
+    "dimensions": [
+      {
+        "id": "1",
+        "name": "Instrumentación y Sensores",
+        "weight": 0.20,
+        "indicators": [
+          "Cobertura Crítica",
+          "Relevancia Analítica",
+          "Calidad de Medición",
+          "Mantenibilidad"
+        ]
+      },
+      {
+        "id": "2",
+        "name": "Producción y Disponibilidad de Datos",
+        "weight": 0.20,
+        "indicators": [
+          "Continuidad de Captura",
+          "Oportunidad de Acceso",
+          "Integridad Temporal",
+          "Recuperabilidad"
+        ]
+      },
+      {
+        "id": "3",
+        "name": "Infraestructura de Comunicación",
+        "weight": 0.15,
+        "indicators": [
+          "Capacidad de Carga",
+          "Desempeño y Estabilidad",
+          "Resiliencia de Red",
+          "Interoperabilidad"
+        ]
+      },
+      {
+        "id": "4",
+        "name": "Integración y Consolidación de Datos",
+        "weight": 0.15,
+        "indicators": [
+          "Convergencia OT/IT",
+          "Estandardización",
+          "Trazabilidad Lineal",
+          "Capa Unificada"
+        ]
+      },
+      {
+        "id": "5",
+        "name": "Gestión Centralizada de Datos (Data Quality)",
+        "weight": 0.15,
+        "indicators": [
+          "Repositorio Analítico",
+          "Validación y Limpieza",
+          "Explotación Analítica",
+          "Gobierno del Dato"
+        ]
+      },
+      {
+        "id": "6",
+        "name": "Cultura de Innovación y Cambio",
+        "weight": 0.15,
+        "indicators": [
+          "Patrocinio Ejecutivo",
+          "Colaboración Interáreas",
+          "Agilidad en Pilotos",
+          "Gestión de Terceros"
+        ]
+      }
+    ],
+    "scale": {
+      "min": 0,
+      "max": 3,
+      "levels": {
+        "0": "Inexistente: No se cuenta con la capacidad o evidencia.",
+        "1": "Básico: Capacidades mínimas, aisladas o manuales.",
+        "2": "Moderado: Implementación funcional con restricciones.",
+        "3": "Avanzado: Capacidades sólidas, confiables y automatizadas."
+      }
+    },
+    "maturity_levels": [
+      {
+        "level": 1,
+        "name": "Inicial",
+        "range": [0, 14],
+        "description": "Riesgo de ejecución muy alto. Requiere fase previa de habilitación digital profunda."
+      },
+      {
+        "level": 2,
+        "name": "Básico",
+        "range": [15, 28],
+        "description": "Posibles oportunidades de Mini Twin, pero con alta fricción y silos de datos."
+      },
+      {
+        "level": 3,
+        "name": "Intermedio",
+        "range": [29, 43],
+        "description": "Punto de Entrada. Viable para primer Mini Twin con alcance controlado."
+      },
+      {
+        "level": 4,
+        "name": "Avanzado",
+        "range": [44, 57],
+        "description": "Preparada para escalamiento multivariable y despliegue rápido de Gemelos Digitales."
+      },
+      {
+        "level": 5,
+        "name": "Optimizado",
+        "range": [58, 72],
+        "description": "Planta de Clase Mundial. Capacidad de simulación, predicción y autogestión de datos."
+      }
+    ]
+  }
+}

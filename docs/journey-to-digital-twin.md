@@ -1,4 +1,4 @@
-# Journey to Digital Twins
+# 2. Journey to Digital Twin
 
 ## Descripción General
 
@@ -126,3 +126,6 @@ El Journey to Digital Twins se divide en dos grandes etapas operativas:
 2. **Flexibilidad de duración:** Las fases online (03-06) tienen duración variable según la disponibilidad de recursos y personal asignado
 3. **Escalabilidad:** El journey está diseñado para expandir progresivamente el alcance del gemelo digital
 4. **Medición de impacto:** A partir de la Fase 04 se inicia la medición formal de resultados y beneficios
+
+---
+[⬅️ Regresar al Index](../README.md) | [Siguiente: Digital Readiness Framework ➡️](digital-readiness-framework.md)
