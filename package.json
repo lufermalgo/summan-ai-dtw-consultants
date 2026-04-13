@@ -1,0 +1,20 @@
+{
+  "name": "summan-ai-dtw-consultants",
+  "version": "1.0.0",
+  "description": "Installer for Summan AI Consulting Pipeline Skills",
+  "main": "scripts/install.js",
+  "bin": {
+    "summan-install": "scripts/install.js"
+  },
+  "scripts": {
+    "install-skills": "node scripts/install.js"
+  },
+  "keywords": [
+    "antigravity",
+    "skills",
+    "summan",
+    "ai"
+  ],
+  "author": "Summan",
+  "license": "MIT"
+}
