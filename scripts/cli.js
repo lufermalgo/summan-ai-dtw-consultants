@@ -15,8 +15,8 @@ const COMMANDS = {
 };
 
 if (!command || !COMMANDS[command]) {
-  console.log('--- Summan AI Skills CLI ---');
-  console.log('Uso: skills <comando> [opciones]');
+  console.log('--- Summan AI CLI ---');
+  console.log('Uso: npx github:lufermalgo/summan-ai-dtw-consultants <comando> [opciones]');
   console.log('');
   console.log('Comandos disponibles:');
   console.log('  install      Instala los skills en el entorno detectado.');
@@ -28,8 +28,8 @@ if (!command || !COMMANDS[command]) {
   console.log('  --antigravity, --gemini, --cursor, --claude, --windsurf, --trae, --kiro, --opencode, --codex');
   console.log('');
   console.log('Ejemplos:');
-  console.log('  skills list --claude');
-  console.log('  skills install --cursor');
+  console.log('  npx github:lufermalgo/summan-ai-dtw-consultants list --claude');
+  console.log('  npx github:lufermalgo/summan-ai-dtw-consultants install --cursor');
   process.exit(1);
 }
 

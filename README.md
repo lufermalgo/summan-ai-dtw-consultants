@@ -18,57 +18,26 @@ Para entender de manera orgánica cómo las habilidades (Skills) y la teoría se
 
 ## 🛠️ Instalación y Configuración Universal
 
-El pipeline de Summan sigue el estándar de la comunidad para la gestión de habilidades. Una vez instalado globalmente, puedes usar el comando \`skills\` directamente.
+El pipeline de Summan es portable y puede ejecutarse directamente desde GitHub en cualquier entorno de agente de IA (IDE o CLI) mediante \`npx\`.
 
-### Instalación del CLI (Solo una vez)
+### Gestión de Skills (vía NPX)
 
-```bash
-npm install -g github:lufermalgo/summan-ai-dtw-consultants
-```
-
-### Comandos Estándar
+El pipeline de Summan es portable y puede ejecutarse directamente desde GitHub en cualquier entorno mediante `npx`.
 
 ```bash
-# Instalar skills en un entorno específico
-skills install --antigravity
-skills install --claude
+# 1. Instalar skills en un entorno específico
+npx github:lufermalgo/summan-ai-dtw-consultants install --antigravity
+npx github:lufermalgo/summan-ai-dtw-consultants install --claude
+npx github:lufermalgo/summan-ai-dtw-consultants install --cursor
 
-# Listar skills instalados por entorno
-skills list --cursor
-skills list --trae
+# 2. Listar skills instalados para auditar el entorno
+npx github:lufermalgo/summan-ai-dtw-consultants list --claude
+npx github:lufermalgo/summan-ai-dtw-consultants list --windsurf
+
+# 3. Desinstalar quirúrgicamente (solo remueve lo instalado por Summan)
+npx github:lufermalgo/summan-ai-dtw-consultants uninstall --antigravity
 ```
 
-```bash
-# Antigravity / Gemini CLI
-skills install --antigravity
-
-# Claude Code / CLI
-skills install --claude
-
-# Cursor & Windsurf
-skills install --cursor
-skills install --windsurf
-
-# Kiro & Trae & OpenAI Codex
-skills install --kiro
-skills install --trae
-skills install --codex
-```
-
-### Inspección de Entorno
-
-Si quieres saber qué habilidades tienes instaladas en un agente específico sin depender de herramientas externas:
-
-```bash
-# Ver skills en Antigravity
-skills list --antigravity
-
-# Ver skills en Claude
-skills list --claude
-
-# Ver skills en Cursor
-skills list --cursor
-```
 
 ### 📂 ¿Qué es el directorio `~/.agents`?
 
