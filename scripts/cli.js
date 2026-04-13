@@ -10,7 +10,8 @@ const remainingArgs = args.slice(1);
 const COMMANDS = {
   'install': 'install.js',
   'uninstall': 'uninstall.js',
-  'catalog': 'catalog.js'
+  'catalog': 'catalog.js',
+  'list': 'list.js'
 };
 
 if (!command || !COMMANDS[command]) {
@@ -20,12 +21,15 @@ if (!command || !COMMANDS[command]) {
   console.log('Comandos disponibles:');
   console.log('  install      Instala los skills en el entorno detectado.');
   console.log('  uninstall    Remueve los skills instalados.');
-  console.log('  catalog      Genera o actualiza el catálogo de habilidades.');
+  console.log('  catalog      Genera el catálogo local (CATALOG.md).');
+  console.log('  list         Lista los skills instalados en un entorno específico.');
   console.log('');
-  console.log('Banderas de Instalación (IDEs soportados):');
-  console.log('  --antigravity, --gemini, --cursor, --claude, --windsurf, --trae, --kiro, --opencode, --codex, --global');
+  console.log('Banderas de Entorno (IDEs soportados):');
+  console.log('  --antigravity, --gemini, --cursor, --claude, --windsurf, --trae, --kiro, --opencode, --codex');
   console.log('');
-  console.log('Ejemplo: npx github:lufermalgo/summan-ai-dtw-consultants install --claude');
+  console.log('Ejemplos:');
+  console.log('  npx github:lufermalgo/summan-ai-dtw-consultants list --claude');
+  console.log('  npx github:lufermalgo/summan-ai-dtw-consultants install --cursor');
   process.exit(1);
 }
 

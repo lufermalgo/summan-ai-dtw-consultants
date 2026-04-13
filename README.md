@@ -44,13 +44,26 @@ npx github:lufermalgo/summan-ai-dtw-consultants --codex
 npx github:lufermalgo/summan-ai-dtw-consultants --global
 ```
 
-### Verificación de la Instalación
+### Inspección de Entorno
 
-Puedes confirmar que los skills están disponibles revisando el catálogo generado:
+Si quieres saber qué habilidades tienes instaladas en un agente específico sin depender de herramientas externas:
 
 ```bash
-cat CATALOG.md
+# Ver skills en Antigravity
+npx github:lufermalgo/summan-ai-dtw-consultants list --antigravity
+
+# Ver skills en Claude
+npx github:lufermalgo/summan-ai-dtw-consultants list --claude
+
+# Ver skills en Cursor
+npx github:lufermalgo/summan-ai-dtw-consultants list --cursor
 ```
+
+### 📂 ¿Qué es el directorio `~/.agents`?
+
+Es posible que veas un directorio llamado `~/.agents/skills`. Este es un estándar comunitario (utilizado por herramientas de Vercel/Anthropic) para compartir habilidades entre agentes. 
+
+**Norte Summan** prefiere el orden y la especificidad. Por eso, te recomendamos usar siempre los flags específicos (`--claude`, `--cursor`, etc.) para mantener cada entorno aislado y profesional.
 
 ## 🚀 Manual del Consultor
 
