@@ -44,6 +44,17 @@ Si necesitas remover los skills o regenerar el catálogo:
 
 ---
 
+## 📚 Documentación y Metodología
+
+Este proyecto se basa en una metodología rigurosa para la transformación digital industrial. Para profundizar en la arquitectura y los modelos de datos, consulta los siguientes documentos:
+
+- **[Visión End-to-End](./docs/Summan%20AI%20Consulting%20Platform%20to%20Digital%20Twin%20%E2%80%20Visi%C3%B3n%20End-to-End.md)**: El pilar estratégico de la plataforma Summan AI.
+- **Metodología de Scoring (Viability & Hotspots)**:
+  - [Framework Reutilizable para Scoring de Hotspots](./docs/Framework%20Reutilizable%20para%20Scoring%20Anal%C3%ADtico%20de%20Hotspots%20Industriales.md)
+  - [Guía de Scoring Analítico de Hotspots](./docs/Scoring%20Anal%C3%ADtico%20de%20Hotspots%20Industriales.md)
+
+---
+
 ## 📖 Catálogo de Skills (Pipeline)
 
 Una vez instalados, tendrás acceso a los siguientes agentes especializados:
