@@ -18,30 +18,41 @@ Para entender de manera orgánica cómo las habilidades (Skills) y la teoría se
 
 ## 🛠️ Instalación y Configuración Universal
 
-El pipeline de Summan es portable y puede instalarse directamente desde GitHub en cualquier entorno de agente de IA (IDE o CLI).
+El pipeline de Summan sigue el estándar de la comunidad para la gestión de habilidades. Una vez instalado globalmente, puedes usar el comando \`skills\` directamente.
 
-### Instalación Rápida (Remote Dist)
+### Instalación del CLI (Solo una vez)
 
-Ejecuta el siguiente comando en la raíz de tu proyecto, usando el flag correspondiente a tu herramienta:
+```bash
+npm install -g github:lufermalgo/summan-ai-dtw-consultants
+```
+
+### Comandos Estándar
+
+```bash
+# Instalar skills en un entorno específico
+skills install --antigravity
+skills install --claude
+
+# Listar skills instalados por entorno
+skills list --cursor
+skills list --trae
+```
 
 ```bash
 # Antigravity / Gemini CLI
-npx github:lufermalgo/summan-ai-dtw-consultants --antigravity
+skills install --antigravity
 
 # Claude Code / CLI
-npx github:lufermalgo/summan-ai-dtw-consultants --claude
+skills install --claude
 
 # Cursor & Windsurf
-npx github:lufermalgo/summan-ai-dtw-consultants --cursor
-npx github:lufermalgo/summan-ai-dtw-consultants --windsurf
+skills install --cursor
+skills install --windsurf
 
 # Kiro & Trae & OpenAI Codex
-npx github:lufermalgo/summan-ai-dtw-consultants --kiro
-npx github:lufermalgo/summan-ai-dtw-consultants --trae
-npx github:lufermalgo/summan-ai-dtw-consultants --codex
-
-# Otros (Standard .agents/skills)
-npx github:lufermalgo/summan-ai-dtw-consultants --global
+skills install --kiro
+skills install --trae
+skills install --codex
 ```
 
 ### Inspección de Entorno
@@ -50,13 +61,13 @@ Si quieres saber qué habilidades tienes instaladas en un agente específico sin
 
 ```bash
 # Ver skills en Antigravity
-npx github:lufermalgo/summan-ai-dtw-consultants list --antigravity
+skills list --antigravity
 
 # Ver skills en Claude
-npx github:lufermalgo/summan-ai-dtw-consultants list --claude
+skills list --claude
 
 # Ver skills en Cursor
-npx github:lufermalgo/summan-ai-dtw-consultants list --cursor
+skills list --cursor
 ```
 
 ### 📂 ¿Qué es el directorio `~/.agents`?
