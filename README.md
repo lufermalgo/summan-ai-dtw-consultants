@@ -24,7 +24,6 @@ El pipeline de Summan es portable y puede ejecutarse directamente desde GitHub e
 
 El pipeline de Summan es portable y puede ejecutarse directamente desde GitHub en cualquier entorno mediante `npx`.
 
-
 #### 1. Instalación Rápida
 
 Instale todos los skills en el entorno deseado. Antigravity es el destino predeterminado.
@@ -63,6 +62,7 @@ npx github:lufermalgo/summan-ai-dtw-consultants uninstall
 npx github:lufermalgo/summan-ai-dtw-consultants uninstall --claude
 ```
 
+
 #### Agentes Soportados
 Puedes usar cualquiera de los siguientes flags:
 `--antigravity`, `--gemini`, `--cursor`, `--claude`, `--windsurf`, `--trae`, `--kiro`, `--opencode`, `--codex`, o `--global`.
@@ -94,6 +94,17 @@ Todas las salidas (reportes, matrices, roadmaps) se centralizan automáticamente
 
 > [!TIP]
 > No es necesario clonar el repositorio para mantener tus skills actualizados. Los comandos anteriores funcionan directamente desde GitHub.
+
+---
+
+## 🤝 Comunidad y Contribución
+
+Este es un proyecto abierto y valoramos la colaboración de la comunidad industrial y tecnológica.
+
+* **[Contribución](CONTRIBUTING.md)**: Lee nuestra guía antes de enviar un Pull Request.
+* **[Código de Conducta](CODE_OF_CONDUCT.md)**: Nos comprometemos a mantener un ambiente seguro y acogedor.
+* **[Seguridad](SECURITY.md)**: Si encuentras un problema de seguridad, repórtalo de forma privada.
+* **[Licencia](LICENSE)**: Distribuido bajo la Licencia MIT.
 
 ---
 
