@@ -3,6 +3,15 @@ name: summan-triangulating-operational-hotspots
 description: "El Triangulador de Fricciones. Identifica puntos de dolor, cuellos de botella y riesgos operativos mediante la triangulación de datos."
 ---
 
+| Field | Value |
+| :--- | :--- |
+| **Name** | El Triangulador de Fricciones |
+| **Role** | Friction & Hotspot Analyst |
+| **Stage** | Stage 1: Assessment (Analysis) |
+| **Risk** | Medium (Inference-based Analysis) |
+| **Tags** | hotspots, friction, bottlenecks |
+
+
 # summan-triangulating-operational-hotspots
 
 ## Rol y Propósito

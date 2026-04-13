@@ -3,6 +3,15 @@ name: summan-ai-dtw-consultants
 description: The central orchestrator skill for the "Journey to the Digital Twin" consulting pipeline. Coordinates the flow between specialized sub-agents.
 ---
 
+| Field | Value |
+| :--- | :--- |
+| **Name** | Summan DTW Orchestrator |
+| **Role** | Process Orchestrator & Controller |
+| **Stage** | Stage 1: Assessment (Entry Point) |
+| **Risk** | Low (Coordination & Task Routing) |
+| **Tags** | orchestration, dtw, assessment, industrial |
+
+
 # summan-ai-dtw-consultants (Orchestrator)
 
 ## When to use this skill

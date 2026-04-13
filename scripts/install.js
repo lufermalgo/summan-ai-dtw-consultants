@@ -15,8 +15,11 @@ const FLAG_PATHS = {
     ? path.join(os.homedir(), 'Library', 'Application Support', 'Claude', 'skills')
     : path.join(os.homedir(), '.claude', 'skills'),
   '--windsurf': path.join(os.homedir(), '.windsurf', 'skills'),
-  '--codex': path.join(os.homedir(), '.codex', 'skills')
+  '--codex': path.join(os.homedir(), '.codex', 'skills'),
+  '--opencode': path.join(os.homedir(), '.opencode', 'skills')
 };
+
+const MANIFEST_NAME = '.summan-installed-skills.json';
 
 const args = process.argv.slice(2);
 let targetDir = FLAG_PATHS['--antigravity']; // Default
@@ -34,8 +37,6 @@ console.log(`[i] Objetivo: ${targetDir}`);
 
 if (!fs.existsSync(LOCAL_SKILLS_PATH)) {
   console.log('[!] Nota: Ejecutando desde instalación remota (npx).');
-  // En este modo, npx ya descargó el repo en un directorio temporal de caché.
-  // El script sigue funcionando porque LOCAL_SKILLS_PATH apuntará a ese caché.
 }
 
 if (!fs.existsSync(targetDir)) {
@@ -43,7 +44,19 @@ if (!fs.existsSync(targetDir)) {
   fs.mkdirSync(targetDir, { recursive: true });
 }
 
+// Cargar o crear manifiesto
+const manifestPath = path.join(targetDir, MANIFEST_NAME);
+let manifest = {};
+if (fs.existsSync(manifestPath)) {
+  try {
+    manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  } catch (e) {
+    manifest = {};
+  }
+}
+
 const skills = fs.readdirSync(LOCAL_SKILLS_PATH);
+const installedSkills = [];
 
 skills.forEach(skill => {
   const source = path.join(LOCAL_SKILLS_PATH, skill);
@@ -51,19 +64,53 @@ skills.forEach(skill => {
 
   if (fs.lstatSync(source).isDirectory()) {
     if (fs.existsSync(target)) {
-      console.log(`[!] El skill ${skill} ya existe. Sobrescribiendo link...`);
-      fs.unlinkSync(target);
+      console.log(`[!] El skill ${skill} ya existe. Sobrescribiendo...`);
+      try {
+        if (fs.lstatSync(target).isSymbolicLink()) {
+          fs.unlinkSync(target);
+        } else {
+          fs.rmSync(target, { recursive: true, force: true });
+        }
+      } catch (e) {
+        console.log(`[!] Error removiendo anterior: ${e.message}`);
+      }
     }
-    console.log(`[+] Vinculando skill: ${skill}...`);
+    
+    console.log(`[+] Instalando skill: ${skill}...`);
     try {
-      fs.symlinkSync(source, target, 'dir');
+      // Intentamos symlink para desarrollo, pero si es npx (remoto) mejor copiar o hardlink
+      // Para efectos de este installer, preferimos symlink si el source está disponible localmente
+      // Si LOCAL_SKILLS_PATH es temporal (npx), entonces copiamos.
+      const isRemote = !fs.existsSync(path.join(process.cwd(), 'package.json'));
+      
+      if (isRemote) {
+        fs.cpSync(source, target, { recursive: true });
+      } else {
+        fs.symlinkSync(source, target, 'dir');
+      }
+      
+      installedSkills.push(skill);
+      manifest[skill] = {
+        installedAt: new Date().toISOString(),
+        path: target,
+        version: '1.0.0' // Podríamos leerlo del SKILL.md o package.json
+      };
     } catch (e) {
-      // Fallback a copia si los symlinks fallan (ej. Windows sin permisos)
-      console.log(`[!] Symlink falló, copiando archivos para ${skill}...`);
+      console.log(`[!] Falló symlink, copiando archivos para ${skill}...`);
       fs.cpSync(source, target, { recursive: true });
+      installedSkills.push(skill);
+      manifest[skill] = {
+        installedAt: new Date().toISOString(),
+        path: target,
+        version: '1.0.0'
+      };
     }
   }
 });
 
+// Guardar manifiesto actualizado
+fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+
 console.log('--- Instalación Completada con Éxito ---');
-console.log('Reinicia tu entorno Antigravity para activar los nuevos skills.');
+console.log(`[v] ${installedSkills.length} skills registrados en el manifiesto.`);
+console.log('Reinicia tu entorno para activar los nuevos skills.');

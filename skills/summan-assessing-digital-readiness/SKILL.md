@@ -3,6 +3,15 @@ name: summan-assessing-digital-readiness
 description: "Evaluador de Madurez Digital. Analiza las 6 dimensiones de preparación organizacional para el Digital Twin."
 ---
 
+| Field | Value |
+| :--- | :--- |
+| **Name** | Evaluador de Madurez Digital |
+| **Role** | Strategy & Readiness Consultant |
+| **Stage** | Stage 1: Assessment (Strategy) |
+| **Risk** | Low (Strategic Analysis) |
+| **Tags** | readiness, strategy, digital-maturity |
+
+
 # summan-assessing-digital-readiness
 
 ## Rol y Propósito

@@ -3,6 +3,15 @@ name: summan-scoring-analytical-viability
 description: "Evaluador de Viabilidad sAhI (Summan Analytical Health Index). Puntúa la factibilidad de implementar soluciones de IA basándose en el estado de los datos."
 ---
 
+| Field | Value |
+| :--- | :--- |
+| **Name** | Evaluador sAhI (Viability) |
+| **Role** | Data Viability Scorer |
+| **Stage** | Stage 1: Assessment (Viability) |
+| **Risk** | Medium (Technical Feasibility) |
+| **Tags** | sahi, viability, ia, data-quality |
+
+
 # summan-scoring-analytical-viability
 
 ## Rol y Propósito

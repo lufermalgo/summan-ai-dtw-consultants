@@ -32,6 +32,15 @@ npx github:lufermalgo/summan-ai-dtw-consultants --cursor
 - **Claude Desktop**: Usar flag `--claude`
 - **Windsurf**: Usar flag `--windsurf`
 - **Codex**: Usar flag `--codex`
+- **OpenCode**: Usar flag `--opencode`
+
+### Mantenimiento y Desinstalación
+
+Si necesitas remover los skills o regenerar el catálogo:
+
+- **Desinstalar**: `npx github:lufermalgo/summan-ai-dtw-consultants --uninstall` (o usa los flags de entorno para limpiar una ruta específica).
+- **Ver Catálogo**: Consulta el archivo [CATALOG.md](./CATALOG.md) para ver la lista técnica actualizada de habilidades.
+- **Regenerar Catálogo (Devs)**: `npm run generate-catalog` (si tienes el repo clonado).
 
 ---
 

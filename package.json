@@ -4,10 +4,14 @@
   "description": "Installer for Summan AI Consulting Pipeline Skills",
   "main": "scripts/install.js",
   "bin": {
-    "summan-install": "scripts/install.js"
+    "summan-install": "scripts/install.js",
+    "summan-uninstall": "scripts/uninstall.js",
+    "summan-catalog": "scripts/catalog-gen.js"
   },
   "scripts": {
-    "install-skills": "node scripts/install.js"
+    "install-skills": "node scripts/install.js",
+    "uninstall-skills": "node scripts/uninstall.js",
+    "generate-catalog": "node scripts/catalog-gen.js"
   },
   "keywords": [
     "antigravity",

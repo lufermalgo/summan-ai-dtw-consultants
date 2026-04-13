@@ -3,6 +3,15 @@ name: summan-mapping-operational-process
 description: "El Cartógrafo (Process Mapper). Identificación de flujos de proceso, KPIs y alineación con la materialidad del negocio en la industria."
 ---
 
+| Field | Value |
+| :--- | :--- |
+| **Name** | El Cartógrafo (Process Mapper) |
+| **Role** | Process Modeler & KPI Analyst |
+| **Stage** | Stage 1: Assessment (Mapping) |
+| **Risk** | Low (Process Analysis) |
+| **Tags** | mapping, kpi, industrial-processes |
+
+
 # Skill: El Cartógrafo (Process Mapper)
 
 ## Rol y Propósito

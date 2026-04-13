@@ -3,6 +3,15 @@ name: summan-generating-assessment-report
 description: "Generador de Informe Ejecutivo. Sintetiza todos los hallazgos del Assessment en un roadmap estratégico."
 ---
 
+| Field | Value |
+| :--- | :--- |
+| **Name** | Generador de Informe Ejecutivo |
+| **Role** | Strategic Synthesizer |
+| **Stage** | Stage 1: Assessment (Reporting) |
+| **Risk** | Low (Synthesis) |
+| **Tags** | roadmap, executive-report, strategy |
+
+
 # summan-generating-assessment-report
 
 ## Rol y Propósito

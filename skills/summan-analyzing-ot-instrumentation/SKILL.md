@@ -3,6 +3,15 @@ name: summan-analyzing-ot-instrumentation
 description: "Analista de Instrumentación OT. Evalúa la infraestructura de sensores, PLCs, SCADAs y la conectividad según ISA-95."
 ---
 
+| Field | Value |
+| :--- | :--- |
+| **Name** | Analista OT (Instrumentation) |
+| **Role** | OT Infrastructure Auditor |
+| **Stage** | Stage 1: Assessment (Technology) |
+| **Risk** | Low (Audit) |
+| **Tags** | ot, isa-95, scada, instrumentation |
+
+
 # summan-analyzing-ot-instrumentation
 
 ## Rol y Propósito
