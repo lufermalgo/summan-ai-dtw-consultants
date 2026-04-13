@@ -17,13 +17,27 @@ El ecosistema está compuesto por un orquestador principal y 7 sub-agentes espec
 
 ## Instalación (Estándar 2026)
 
-Para instalar estas habilidades en tu entorno de Antigravity, clona este repositorio en tu directorio de proyectos y registra la ruta de los skills:
+### Opción 1: Vía NPX (Instalación Instantánea)
+La "magia" de `npx` es que descarga temporalmente el repositorio y ejecuta el instalador sin que tú tengas que clonarlo manualmente. 
+
+**Para instalar desde GitHub sin clonar:**
+```bash
+npx github:lufermalgo/summan-ai-dtw-consultants --antigravity
+```
+
+**Para instalar localmente (si ya lo descargaste):**
+```bash
+npx . --antigravity
+```
+
+> [!TIP]
+> Para lograr que funcione simplemente como `npx summan-ai-dtw-consultants`, el paquete debe ser publicado en el registro de **npm**. Una vez publicado, estará disponible para todo el mundo sin prefijos de GitHub.
+
+### Opción 2: Instalación Manual
+Crea un enlace simbólico de los skills en tu directorio de configuración de Antigravity:
 
 ```bash
-# Clonar el repositorio
-git clone [URL-DEL-REPO] /Users/lufermalgo/Proyectos/summan-ai-dtw-consultants
-
-# El entorno detectará automáticamente los skills dentro de la carpeta /skills/
+ln -s /Users/lufermalgo/Proyectos/summan-ai-dtw-consultants/skills/* ~/.gemini/antigravity/skills/
 ```
 
 ## Uso

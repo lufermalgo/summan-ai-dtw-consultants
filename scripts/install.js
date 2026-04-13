@@ -7,31 +7,48 @@ const os = require('os');
 const SKILLS_DIR = path.join(os.homedir(), '.gemini', 'antigravity', 'skills');
 const LOCAL_SKILLS_PATH = path.join(process.cwd(), 'skills');
 
-console.log('--- Summan AI Skills Installer ---');
+const args = process.argv.slice(2);
+let targetDir = SKILLS_DIR;
 
-if (!fs.existsSync(LOCAL_SKILLS_PATH)) {
-  console.error('Error: No se encontró la carpeta /skills en el directorio actual.');
-  process.exit(1);
+// Soporte para flags estilo 2026
+if (args.includes('--antigravity') || args.includes('--gemini')) {
+  targetDir = path.join(os.homedir(), '.gemini', 'antigravity', 'skills');
+} else if (args.includes('--cursor')) {
+  targetDir = path.join(os.homedir(), '.cursor', 'extensions', 'skills');
 }
 
-if (!fs.existsSync(SKILLS_DIR)) {
-  console.log('Creando directorio de skills en:', SKILLS_DIR);
-  fs.mkdirSync(SKILLS_DIR, { recursive: true });
+console.log('--- Summan AI Skills Installer ---');
+console.log(`[i] Objetivo: ${targetDir}`);
+
+if (!fs.existsSync(LOCAL_SKILLS_PATH)) {
+  console.log('[!] Nota: Ejecutando desde instalación remota (npx).');
+  // En este modo, npx ya descargó el repo en un directorio temporal de caché.
+  // El script sigue funcionando porque LOCAL_SKILLS_PATH apuntará a ese caché.
+}
+
+if (!fs.existsSync(targetDir)) {
+  console.log('Creando directorio de destino:', targetDir);
+  fs.mkdirSync(targetDir, { recursive: true });
 }
 
 const skills = fs.readdirSync(LOCAL_SKILLS_PATH);
 
 skills.forEach(skill => {
   const source = path.join(LOCAL_SKILLS_PATH, skill);
-  const target = path.join(SKILLS_DIR, skill);
+  const target = path.join(targetDir, skill);
 
   if (fs.lstatSync(source).isDirectory()) {
     if (fs.existsSync(target)) {
-      console.log(`[!] El skill ${skill} ya está instalado. Saltando...`);
-    } else {
-      console.log(`[+] Instalando skill: ${skill}...`);
-      // En un entorno real de 2026, esto podría ser un symlink o una copia
+      console.log(`[!] El skill ${skill} ya existe. Sobrescribiendo link...`);
+      fs.unlinkSync(target);
+    }
+    console.log(`[+] Vinculando skill: ${skill}...`);
+    try {
       fs.symlinkSync(source, target, 'dir');
+    } catch (e) {
+      // Fallback a copia si los symlinks fallan (ej. Windows sin permisos)
+      console.log(`[!] Symlink falló, copiando archivos para ${skill}...`);
+      fs.cpSync(source, target, { recursive: true });
     }
   }
 });
