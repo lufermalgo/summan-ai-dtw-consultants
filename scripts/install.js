@@ -5,7 +5,7 @@ const path = require('path');
 const os = require('os');
 
 const SKILLS_DIR = path.join(os.homedir(), '.gemini', 'antigravity', 'skills');
-const LOCAL_SKILLS_PATH = path.join(process.cwd(), 'skills');
+const LOCAL_SKILLS_PATH = path.join(__dirname, '..', 'skills');
 
 const FLAG_PATHS = {
   '--antigravity': path.join(os.homedir(), '.gemini', 'antigravity', 'skills'),
