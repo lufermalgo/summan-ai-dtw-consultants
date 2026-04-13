@@ -58,9 +58,9 @@ La plataforma se alimenta de la metodología y herramientas propietarias de Summ
          ├──────────────────────────────────────┐
          ▼                                      ▼
 ┌─────────────────────────────────────┐  ┌─────────────────────────────────┐
-│  SKILL 3: HOTSPOT TRIANGULATOR      │  │  SKILL 5: OT & INSTRUMENTATION │
+│  SKILL 3: HOTSPOT TRIANGULATOR      │  │  SKILL 5: OT/IT & SYSTEMS       │
 │  "El Detective"                     │  │  ANALYST — "El Ingeniero"       │
-│  Descubre incertidumbres por        │  │  ISA-95, sensórica, SCADA,      │
+│  Descubre incertidumbres por        │  │  ISA-95, MES, ERP, Networks,    │
 │  cada bloque del mapa               │  │  observabilidad del proceso     │
 └────────┬────────────────────────────┘  └────────┬────────────────────────┘
          │ (Hotspots estructurados)               │ (Mapa de Instrumentación)
@@ -164,24 +164,24 @@ La plataforma se alimenta de la metodología y herramientas propietarias de Summ
 
 ---
 
-### SKILL 5: OT & Instrumentation Analyst — *"El Ingeniero"*
+### SKILL 5: OT/IT & Systems Analyst — *"El Ingeniero"*
 
-**Propósito:** Proveer la expertise especializada en Automatización y Tecnologías de Operación (OT) necesaria para evaluar si el proceso productivo es verdaderamente **observable** a nivel de datos. Es el agente que habla el idioma de la planta: sensores, PLCs, SCADA, MES, ISA-95.
+**Propósito:** Proveer la expertise especializada en la convergencia de Tecnologías de Operación (OT) y Tecnologías de Información (IT). Evalúa si el ecosistema industrial (desde sensores hasta el ERP) es verdaderamente **observable** y si la infraestructura de red permite la adquisición masiva de datos para el Digital Twin.
 
 **Cuándo se usa:**
 - En paralelo con el Skill 3, una vez que el Mapa Operacional (Skill 2) está validado.
-- Su salida alimenta directamente al Skill 4 (sAhI) para validar la viabilidad de datos.
+- Su salida es el insumo técnico fundamental para el Skill 4 (sAhI) y el Skill 6 (Readiness).
 
 **Capacidades:**
-- **Enfoque ISA-95:** Mapea los niveles del modelo ISA-95 presentes en la planta del cliente (Nivel 0: Sensores → Nivel 1: Control → Nivel 2: Supervisión → Nivel 3: MOM/MES → Nivel 4: ERP).
-- **Identificación de Instrumentación:** Por cada bloque del Mapa Operacional, identifica qué sensores, transmisores y actuadores existen (temperatura, presión, amperaje, caudal, humedad, peso).
-- **Evaluación de Observabilidad:** Determina si cada variable clave del proceso está siendo medida, transmitida y almacenada, o si es un "punto ciego" operativo.
-- **Producción y Accesibilidad de Datos:** Evalúa si los datos se producen, con qué frecuencia, en qué formato, y si son accesibles (historiador, base de datos, CSV manual).
-- **Correlación de Señales:** Identifica qué señales de datos pueden correlacionarse entre bloques del proceso para alimentar modelos analíticos (ej: la temperatura de la caldera se correlaciona con la dureza del pellet).
-- **Guía de conversación técnica:** Sugiere preguntas especializadas para entrevistar a los ingenieros de automatización y mantenimiento del cliente.
+- **Modelo ISA-95 Extendido:** Mapea e interconecta todos los niveles del cliente (Nivel 0-2: Planta, Nivel 3: MES/MOM, Nivel 4: ERP/Analytics).
+- **Inventario de Sistemas de Información:** Identifica y evalúa sistemas MES, MOM, ERP, LIMS y herramientas de Analítica/BI existentes que consumen o generan datos del proceso.
+- **Evaluación de Infraestructura Digital/Redes:** Analiza la topología de red, anchos de banda, protocolos (OPC, MQTT, SQL), seguridad y capacidades reales de adquisición y transporte de datos.
+- **Identificación de Instrumentación & Sensórica:** Por cada bloque del Mapa Operacional, valida la existencia y estado de sensores, transmisores y actuadores críticos.
+- **Matriz de Disponibilidad de Datos:** Determina si variables clave están siendo medidas, transmitidas y almacenadas con la frecuencia y calidad necesaria para analítica avanzada.
+- **Guía para el Consultor:** Proporciona un checklist técnico para auditar salas de control, centros de datos y documentación técnica (P&IDs, arquitecturas de red, diccionarios de datos).
 
-**Entrada:** Mapa Operacional (Skill 2) + Evidencia técnica (P&IDs, manuales, fotos de tableros).
-**Salida:** Mapa de Instrumentación Actual + Evaluación de Observabilidad por bloque + Matriz de Señales Disponibles vs. Requeridas.
+**Entrada:** Mapa Operacional (Skill 2) + Evidencia técnica (P&IDs, arquitecturas de red, manuales de sistemas, fotos de tableros).
+**Salida:** Matriz de Madurez de Sistemas OT/IT + Evaluación de Observabilidad y Redes por bloque + Matriz de Señales Disponibles vs. Requeridas.
 
 ---
 
