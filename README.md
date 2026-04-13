@@ -20,24 +20,51 @@ Para entender de manera orgánica cómo las habilidades (Skills) y la teoría se
 
 El pipeline de Summan es portable y puede ejecutarse directamente desde GitHub en cualquier entorno de agente de IA (IDE o CLI) mediante \`npx\`.
 
-### Gestión de Skills (vía NPX)
+### 🛠️ Gestión de Skills (vía NPX)
 
 El pipeline de Summan es portable y puede ejecutarse directamente desde GitHub en cualquier entorno mediante `npx`.
 
+
+#### 1. Instalación Rápida
+
+Instale todos los skills en el entorno deseado. Antigravity es el destino predeterminado.
+
 ```bash
-# 1. Instalar skills en un entorno específico (Antigravity por defecto)
-npx github:lufermalgo/summan-ai-dtw-consultants install --antigravity
+# Opción por defecto (Antigravity)
+npx github:lufermalgo/summan-ai-dtw-consultants
 
-# 2. Comprobar instalación (Listar skills activos)
-npx github:lufermalgo/summan-ai-dtw-consultants list --antigravity
-
-# 3. Desinstalación quirúrgica (Solo remueve recursos de Summan)
-npx github:lufermalgo/summan-ai-dtw-consultants uninstall --antigravity
+# Para otros agentes (Cursor, Claude, Windsurf, etc.)
+npx github:lufermalgo/summan-ai-dtw-consultants --claude
 ```
 
 
+#### 2. Comprobación y Auditoría
+
+Verifique qué skills están instalados y si se encuentran como archivos físicos o enlaces simbólicos.
+
+```bash
+# Lista los skills del entorno por defecto
+npx github:lufermalgo/summan-ai-dtw-consultants list
+
+# Lista los skills de un entorno específico
+npx github:lufermalgo/summan-ai-dtw-consultants list --cursor
+```
+
+
+#### 3. Desinstalación Quirúrgica
+
+Remueve únicamente los skills instalados por Summan. **Es vital usar el mismo flag** utilizado en la instalación para localizar el manifiesto correcto.
+
+```bash
+# Desinstalar del entorno por defecto
+npx github:lufermalgo/summan-ai-dtw-consultants uninstall
+
+# Desinstalar de un entorno específico (ej. Claude)
+npx github:lufermalgo/summan-ai-dtw-consultants uninstall --claude
+```
+
 #### Agentes Soportados
-Puedes usar cualquiera de los siguientes flags según tu IDE:
+Puedes usar cualquiera de los siguientes flags:
 `--antigravity`, `--gemini`, `--cursor`, `--claude`, `--windsurf`, `--trae`, `--kiro`, `--opencode`, `--codex`, o `--global`.
 
 
@@ -64,17 +91,6 @@ Todas las salidas (reportes, matrices, roadmaps) se centralizan automáticamente
 
 * **Directorio**: `/outputs/`
 * **Formato**: Markdown (.md) de alta fidelidad.
-
-## ⚙️ Mantenimiento del Pipeline
-
-El repositorio cuenta con una interfaz unificada para gestionar el ciclo de vida de los skills de forma remota:
-
-| Comando | Descripción |
-| :--- | :--- |
-| `npx github:lufermalgo/summan-ai-dtw-consultants install` | Instala todos los skills de Summan en el entorno indicado. |
-| `npx github:lufermalgo/summan-ai-dtw-consultants list` | Lista y verifica los skills instalados y sus tipos (FILE/LINK). |
-| `npx github:lufermalgo/summan-ai-dtw-consultants uninstall` | Remueve de forma segura los recursos instalados y limpia el manifiesto. |
-| `npx github:lufermalgo/summan-ai-dtw-consultants catalog` | Re-genera el `CATALOG.md` basándose en las definiciones locales. |
 
 > [!TIP]
 > No es necesario clonar el repositorio para mantener tus skills actualizados. Los comandos anteriores funcionan directamente desde GitHub.
