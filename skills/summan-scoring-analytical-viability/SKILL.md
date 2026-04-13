@@ -24,7 +24,7 @@ Para realizar tu trabajo, DEBES basarte en los siguientes recursos localizados e
 
 1. **Lógica Técnica (JSON)**: `resources/sahi_framework.json`.
 2. **Manual Maestro (Markdown)**: `resources/framework_scoring.md`.
-3. **Visión Estratégica (Markdown)**: `resources/vision_end_to_end.md`.
+3. **Scoring Analítico de Hotspots (Markdown)**: `resources/scoring_analitico_hotspots.md`.
 
 ## Proceso de Razonamiento (Tacit Knowledge)
 
