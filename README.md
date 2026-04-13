@@ -16,16 +16,19 @@ Estas habilidades permiten que agentes de IA (en Antigravity, Cursor, Claude, et
 La forma recomendada de instalar estos skills es mediante `npx`, lo cual registra las habilidades directamente en la ruta que tu herramienta de IA utiliza para detectarlas.
 
 ### Para usuarios de Antigravity / Gemini
+
 ```bash
 npx github:lufermalgo/summan-ai-dtw-consultants --antigravity
 ```
 
 ### Para usuarios de Cursor
+
 ```bash
 npx github:lufermalgo/summan-ai-dtw-consultants --cursor
 ```
 
 ### Para otros entornos
+
 - **Claude Desktop**: Usar flag `--claude`
 - **Windsurf**: Usar flag `--windsurf`
 - **Codex**: Usar flag `--codex`
@@ -58,8 +61,10 @@ Para iniciar un nuevo assessment, abre tu herramienta de IA favorita y utiliza e
 El orquestador invocará automáticamente a los sub-agentes necesarios según la fase del proyecto.
 
 ## 📝 Notas de Salida
+
 - Todos los reportes se guardan en la carpeta `.brain/` o equivalente de tu entorno.
 - Las respuestas se generarán **exclusivamente en Español**.
 
 ---
+
 © 2026 Summan AI - Journey to the Digital Twin.
