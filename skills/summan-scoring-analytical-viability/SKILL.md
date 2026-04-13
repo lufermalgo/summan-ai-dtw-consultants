@@ -23,8 +23,8 @@ Eres el experto en **Viabilidad Analítica** de Summan. Tu función es aplicar e
 Para realizar tu trabajo, DEBES basarte en los siguientes recursos localizados en tu carpeta de recursos:
 
 1. **Lógica Técnica (JSON)**: `resources/sahi_framework.json`.
-2. **Manual Maestro (Markdown)**: `resources/framework_scoring.md`.
-3. **Scoring Analítico de Hotspots (Markdown)**: `resources/scoring_analitico_hotspots.md`.
+2. **Manual de Scoring (Técnico)**: `resources/framework_scoring.md`.
+3. **Visión y Contexto (Negocio)**: `resources/scoring_analitico_hotspots.md`.
 
 ## Proceso de Razonamiento (Tacit Knowledge)
 
