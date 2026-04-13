@@ -4,8 +4,23 @@ const { spawn } = require('child_process');
 const path = require('path');
 
 const args = process.argv.slice(2);
-const command = args[0];
-const remainingArgs = args.slice(1);
+let command = args[0];
+let remainingArgs = args.slice(1);
+
+// Si no hay comando, o el primero es un flag, por defecto es 'install'
+if (!command || command.startsWith('--')) {
+  if (command === '--help' || command === '-h') {
+    command = 'help'; // Forzará la ayuda abajo
+  } else {
+    remainingArgs = args;
+    command = 'install';
+  }
+}
+
+if (command === 'help') {
+  // Solo para forzar la ayuda
+  command = null;
+}
 
 const COMMANDS = {
   'install': 'install.js',

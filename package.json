@@ -4,7 +4,7 @@
   "description": "Installer for Summan AI Consulting Pipeline Skills",
   "main": "scripts/install.js",
   "bin": {
-    "summan-ai-dtw-consultants": "./scripts/install.js",
+    "summan-ai-dtw-consultants": "./scripts/cli.js",
     "summan": "./scripts/cli.js",
     "summan-install": "./scripts/install.js",
     "summan-uninstall": "./scripts/uninstall.js"

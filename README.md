@@ -25,18 +25,20 @@ El pipeline de Summan es portable y puede ejecutarse directamente desde GitHub e
 El pipeline de Summan es portable y puede ejecutarse directamente desde GitHub en cualquier entorno mediante `npx`.
 
 ```bash
-# 1. Instalar skills en un entorno específico
+# 1. Instalar skills en un entorno específico (Antigravity por defecto)
 npx github:lufermalgo/summan-ai-dtw-consultants install --antigravity
-npx github:lufermalgo/summan-ai-dtw-consultants install --claude
-npx github:lufermalgo/summan-ai-dtw-consultants install --cursor
 
-# 2. Listar skills instalados para auditar el entorno
-npx github:lufermalgo/summan-ai-dtw-consultants list --claude
-npx github:lufermalgo/summan-ai-dtw-consultants list --windsurf
+# 2. Comprobar instalación (Listar skills activos)
+npx github:lufermalgo/summan-ai-dtw-consultants list --antigravity
 
-# 3. Desinstalar quirúrgicamente (solo remueve lo instalado por Summan)
+# 3. Desinstalación quirúrgica (Solo remueve recursos de Summan)
 npx github:lufermalgo/summan-ai-dtw-consultants uninstall --antigravity
 ```
+
+
+#### Agentes Soportados
+Puedes usar cualquiera de los siguientes flags según tu IDE:
+`--antigravity`, `--gemini`, `--cursor`, `--claude`, `--windsurf`, `--trae`, `--kiro`, `--opencode`, `--codex`, o `--global`.
 
 
 ### 📂 ¿Qué es el directorio `~/.agents`?
@@ -69,9 +71,10 @@ El repositorio cuenta con una interfaz unificada para gestionar el ciclo de vida
 
 | Comando | Descripción |
 | :--- | :--- |
-| `npx github:lufermalgo/summan-ai-dtw-consultants install` | Instala los skills en el entorno detectado (`--antigravity`, `--cursor`, etc). |
-| `npx github:lufermalgo/summan-ai-dtw-consultants uninstall` | Remueve de forma segura los recursos instalados. |
-| `npx github:lufermalgo/summan-ai-dtw-consultants catalog` | Sincroniza el catálogo global con las definiciones locales. |
+| `npx github:lufermalgo/summan-ai-dtw-consultants install` | Instala todos los skills de Summan en el entorno indicado. |
+| `npx github:lufermalgo/summan-ai-dtw-consultants list` | Lista y verifica los skills instalados y sus tipos (FILE/LINK). |
+| `npx github:lufermalgo/summan-ai-dtw-consultants uninstall` | Remueve de forma segura los recursos instalados y limpia el manifiesto. |
+| `npx github:lufermalgo/summan-ai-dtw-consultants catalog` | Re-genera el `CATALOG.md` basándose en las definiciones locales. |
 
 > [!TIP]
 > No es necesario clonar el repositorio para mantener tus skills actualizados. Los comandos anteriores funcionan directamente desde GitHub.
