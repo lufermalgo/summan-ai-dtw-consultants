@@ -1,90 +1,58 @@
-# Summan AI Consulting Pipeline: Manual de Usuario
+# Summan AI Consulting Pipeline: Journey to the Digital Twin
 
-Este repositorio contiene la suite oficial de **Skills de IA** para el ecosistema Summan, diseñados para automatizar el **Assessment de Preparación Industrial** (Etapa 1 del Journey to the Digital Twin).
+Este repositorio es el núcleo tecnológico del **Pipeline de Consultoría Summan AI**, una suite de agentes inteligentes diseñados para orquestar la transformación industrial hacia el **Gemelo Digital (Digital Twin)**.
 
-## 🚀 Introducción
+## 📖 Visión Estratégica
+El pipeline sigue la metodología propietaria de Summan para la evaluación de activos industriales, estructurada en fases de descubrimiento, diagnóstico y roadmapping.
 
-Estas habilidades permiten que agentes de IA (en Antigravity, Cursor, Claude, etc.) actúen como consultores expertos en procesos industriales, analizando datos del cliente, mapeando KPIs y detectando oportunidades tecnológicas de manera estandarizada y profunda.
+- **Visión General**: [Consulting Platform to Digital Twin — Visión End-to-End](docs/Summan%20AI%20Consulting%20Platform%20to%20Digital%20Twin%20—%20Visión%20End-to-End.md)
+- **Framework Metodológico**: [Framework Reutilizable para Scoring Analítico (sAhI)](docs/Framework%20Reutilizable%20para%20Scoring%20Analítico%20de%20Hotspots%20Industriales.md)
+- **Matriz de Viabilidad**: [Scoring Analítico de Hotspots Industriales](docs/Scoring%20Analítico%20de%20Hotspots%20Industriales.md)
 
-## 🛠️ Requisitos Previos
+## 🛠️ Instalación y Configuración
+El pipeline es portable y puede instalarse directamente desde GitHub en los principales entornos de agentes de IA.
 
-- **Node.js**: Necesario para ejecutar el instalador automatizado.
-- **Un IDE/CLI compatible**: Antigravity, Cursor, Claude Desktop, o Windsurf (versión 2026+).
-
-## 📦 Instalación Automatizada
-
-La forma recomendada de instalar estos skills es mediante `npx`, lo cual registra las habilidades directamente en la ruta que tu herramienta de IA utiliza para detectarlas.
-
-### Para usuarios de Antigravity / Gemini
+### Instalación Rápida
+Ejecuta el siguiente comando en la raíz de tu proyecto, usando el flag correspondiente a tu herramienta:
 
 ```bash
+# Distribución principal (Antigravity / Gemini CLI)
 npx github:lufermalgo/summan-ai-dtw-consultants --antigravity
+
+# Otros entornos compatibles
+npx github:lufermalgo/summan-ai-dtw-consultants --cursor      # Cursor AI
+npx github:lufermalgo/summan-ai-dtw-consultants --claude      # Claude Code / CLI
+npx github:lufermalgo/summan-ai-dtw-consultants --windsurf    # Windsurf
+npx github:lufermalgo/summan-ai-dtw-consultants --opencode    # OpenCode
 ```
 
-### Para usuarios de Cursor
-
+### Verificación de la Instalación
+Puedes confirmar que los skills están disponibles revisando el catálogo generado:
 ```bash
-npx github:lufermalgo/summan-ai-dtw-consultants --cursor
+cat CATALOG.md
 ```
 
-### Para otros entornos
+## 🚀 Manual del Consultor
+Los agentes están diseñados para trabajar de forma autónoma siguiendo las reglas de negocio definidas en la documentación técnica.
 
-- **Claude Desktop**: Usar flag `--claude`
-- **Windsurf**: Usar flag `--windsurf`
-- **Codex**: Usar flag `--codex`
-- **OpenCode**: Usar flag `--opencode`
+### Cómo utilizar los Skills
+Una vez instalados, puedes invocar al orquestador o a sub-agentes específicos mediante comandos naturales según tu IDE:
+- *"Analiza este proceso industrial usando el framework sAhI"*
+- *"Genera el mapa de procesos para la línea de producción X"*
 
-### Mantenimiento y Desinstalación
+### Gestión de Entregables
+Para mantener un entorno de trabajo limpio y profesional, todas las salidas (reportes, matrices, roadmaps) se centralizan automáticamente en:
+- **Directorio**: `/outputs/`
+- **Formato**: Markdown (.md) de alta fidelidad.
 
-Si necesitas remover los skills o regenerar el catálogo:
+## ⚙️ Mantenimiento del Pipeline
+El repositorio incluye una suite de comandos para gestionar el ciclo de vida de los skills:
 
-- **Desinstalar**: `npx github:lufermalgo/summan-ai-dtw-consultants --uninstall` (o usa los flags de entorno para limpiar una ruta específica).
-- **Ver Catálogo**: Consulta el archivo [CATALOG.md](./CATALOG.md) para ver la lista técnica actualizada de habilidades.
-- **Regenerar Catálogo (Devs)**: `npm run generate-catalog` (si tienes el repo clonado).
-
----
-
-## 📚 Documentación y Metodología
-
-Este proyecto se basa en una metodología rigurosa para la transformación digital industrial. Para profundizar en la arquitectura y los modelos de datos, consulta los siguientes documentos:
-
-- **[Visión End-to-End](./docs/Summan%20AI%20Consulting%20Platform%20to%20Digital%20Twin%20%E2%80%20Visi%C3%B3n%20End-to-End.md)**: El pilar estratégico de la plataforma Summan AI.
-- **Metodología de Scoring (Viability & Hotspots)**:
-  - [Framework Reutilizable para Scoring de Hotspots](./docs/Framework%20Reutilizable%20para%20Scoring%20Anal%C3%ADtico%20de%20Hotspots%20Industriales.md)
-  - [Guía de Scoring Analítico de Hotspots](./docs/Scoring%20Anal%C3%ADtico%20de%20Hotspots%20Industriales.md)
+| Comando | Descripción |
+| :--- | :--- |
+| `summan-install` | Actualiza o reinstala los skills desde el origen. |
+| `summan-uninstall` | Elimina de forma segura todos los recursos instalados. |
+| `summan-catalog` | Sincroniza el catálogo de habilidades con los metadatos de los skills. |
 
 ---
-
-## 📖 Catálogo de Skills (Pipeline)
-
-Una vez instalados, tendrás acceso a los siguientes agentes especializados:
-
-| Skill | Nombre en el Sistema | Función Principal |
-| :--- | :--- | :--- |
-| **Orquestador** | `summan-ai-dtw-consultants` | Gestiona el flujo completo del assessment. |
-| **Discovery** | `summan-ingesting-client-context` | Analiza documentos RAW del cliente. |
-| **Mapper** | `summan-mapping-operational-process` | Identifica flujos de proceso y KPIs. |
-| **Hotspots** | `summan-triangulating-operational-hotspots` | Detecta cuellos de botella y riesgos. |
-| **Viability** | `summan-scoring-analytical-viability` | Evalúa si los datos permiten analítica avanzada. |
-| **Instrumentation** | `summan-analyzing-ot-instrumentation` | Evalúa el estado de sensores y redes OT. |
-| **Readiness** | `summan-assessing-digital-readiness` | Mide la madurez digital del personal y procesos. |
-| **Reporting** | `summan-generating-assessment-report` | Genera el informe final ejecutivo. |
-
----
-
-## 🎯 Instrucciones de Uso
-
-Para iniciar un nuevo assessment, abre tu herramienta de IA favorita y utiliza el siguiente comando:
-
-> "Activar skill `summan-ai-dtw-consultants` para iniciar el assessment de preparación digital para el cliente [Nombre del Cliente]. Utiliza los documentos proporcionados en la carpeta del proyecto."
-
-El orquestador invocará automáticamente a los sub-agentes necesarios según la fase del proyecto.
-
-## 📝 Notas de Salida
-
-- Todos los reportes se guardan en la carpeta `.brain/` o equivalente de tu entorno.
-- Las respuestas se generarán **exclusivamente en Español**.
-
----
-
-© 2026 Summan AI - Journey to the Digital Twin.
+© 2026 Summan AI. Todos los derechos reservados.
